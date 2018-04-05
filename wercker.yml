@@ -1,5 +1,5 @@
 box: ubuntu
-command-timeout: 30
+no-response-timeout: 30
 build:
 
   steps:
