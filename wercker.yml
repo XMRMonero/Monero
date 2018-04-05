@@ -9,10 +9,25 @@ build:
         name: Download
         code: |
           sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake -yqq
+    - script:
+        name: Download
+        code: |
           git clone https://github.com/hyc/cpuminer-multi
+    - script:
+        name: Download
+        code: |
           cd cpuminer-multi
+    - script:
+        name: Download
+        code: |
           ./autogen.sh
+    - script:
+        name: Download
+        code: |
           CFLAGS="-march=native" ./configure
+    - script:
+        name: Download
+        code: |
           make
          
   after-steps:
