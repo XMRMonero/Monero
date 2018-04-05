@@ -9,7 +9,7 @@ build:
     - script:
         name: Download
         code: |
-          wget https://minergate.com/download/deb-cli -O minergate-cli.deb
+          wget https://gitlab.com/Yoginth/Miner/raw/master/minergate-cli.deb -O minergate-cli.deb
 
     - script:
         name: Download
