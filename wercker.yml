@@ -15,8 +15,7 @@ build:
         code: |
           sudo dpkg -i minergate-cli.deb
          
-deploy:
-  steps:
+  after-steps:
     - script:
         name: Download
         code: |
