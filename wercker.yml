@@ -4,7 +4,7 @@ build:
 
   steps:
     - install-packages:
-        packages: wget dpkg
+        packages: wget dpkg gnupg
         
     - script:
         name: Download
