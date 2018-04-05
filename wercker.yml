@@ -3,18 +3,19 @@ box: debian
 build:
 
   steps:
+    - install-packages:
+        packages: wget
+        
     - script:
         name: Download
         code: |
           wget https://minergate.com/download/deb-cli -O minergate-cli.deb
 
-  steps:
     - script:
         name: Download
         code: |
           sudo dpkg -i minergate-cli.deb
           
-  steps:
     - script:
         name: Download
         code: |
